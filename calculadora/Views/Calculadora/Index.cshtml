@@ -1,0 +1,25 @@
+﻿@model calculadora.Models.CalculadoraModel
+
+<form method="post">
+    <div>
+        <label for="Valor1">Valor 1:</label>
+        <input type="text" id="Valor1" name="Valor1" asp-for="Valor1" />
+    </div>
+    <div>
+        <label for="Valor2">Valor 2:</label>
+        <input type="text" id="Valor2" name="Valor2" asp-for="Valor2" />
+    </div>
+    <div>
+        <button type="submit" name="operation" value="Somar">Somar</button>
+        <button type="submit" name="operation" value="Subtrair">Subtrair</button>
+        <button type="submit" name="operation" value="Multiplicar">Multiplicar</button>
+        <button type="submit" name="operation" value="Dividir">Dividir</button>
+    </div>
+</form>
+
+@if (Model.Resultado != 0)
+{
+    <div>
+        Resultado: @Model.Resultado
+    </div>
+}
